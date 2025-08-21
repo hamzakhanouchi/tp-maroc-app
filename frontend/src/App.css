@@ -1,0 +1,983 @@
+/* Variables de couleurs modernes */
+:root {
+  --primary-blue: #2563eb;
+  --primary-blue-light: #3b82f6;
+  --primary-blue-dark: #1d4ed8;
+  --secondary-green: #10b981;
+  --secondary-green-light: #34d399;
+  --secondary-green-dark: #059669;
+  --accent-orange: #f59e0b;
+  --accent-red: #ef4444;
+  --success-green: #22c55e;
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1e293b;
+  --gray-900: #0f172a;
+  --white: #ffffff;
+}
+
+/* Reset et base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+/* ===== HEADER MODERNE GOUVERNEMENTAL ===== */
+
+.gouvernement-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid var(--gray-200);
+  transition: all 0.3s ease;
+}
+
+
+
+/* Bande supérieure moderne */
+.header-top-bar {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 50%, var(--gray-800) 100%);
+  color: var(--white);
+  padding: 12px 0;
+  font-size: 0.9rem;
+  border-bottom: 3px solid var(--accent-orange);
+  position: relative;
+  overflow: hidden;
+}
+
+.header-top-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="pattern" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse"><circle cx="12.5" cy="12.5" r="1" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23pattern)"/></svg>');
+  opacity: 0.7;
+}
+
+.header-top-bar .header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.top-center {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.version-ar {
+  font-family: 'Arial', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  direction: rtl;
+}
+
+.version-fr {
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+/* Styles pour les liens supprimés */
+
+/* Bande principale moderne */
+.header-main {
+  background: var(--header-bg, linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(247, 248, 250, 0.95) 100%));
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+
+
+.header-main::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--rouge-maroc) 20%, var(--or-maroc) 50%, var(--rouge-maroc) 80%, transparent 100%);
+  opacity: 0.3;
+}
+
+.header-main .header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex: 1;
+}
+
+.logo-maroc-officiel {
+  height: 65px;
+  width: auto;
+  filter: drop-shadow(0 6px 20px rgba(193, 39, 45, 0.15));
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.logo-maroc-officiel:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 8px 25px rgba(193, 39, 45, 0.25));
+}
+
+.header-title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.institution-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.institution-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--bleu-institutionnel);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.department-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--vert-maroc);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 98, 51, 0.15);
+  position: relative;
+  margin-bottom: 6px;
+}
+
+
+
+.department-name::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--vert-maroc), var(--or-maroc));
+  border-radius: 1px;
+}
+
+.service-title h1 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--rouge-maroc);
+  margin: 0;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(193, 39, 45, 0.15);
+  background: linear-gradient(135deg, var(--rouge-maroc) 0%, var(--rouge-fonce) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+
+
+.service-title h1:hover {
+  transform: translateX(5px);
+}
+
+.service-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* Actions et navigation */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--bleu-institutionnel);
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  border: 2px solid transparent;
+}
+
+.nav-link:hover {
+  background: linear-gradient(135deg, var(--bleu-institutionnel), var(--bleu-fonce));
+  color: var(--blanc);
+  border-color: var(--or-maroc);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(27, 54, 93, 0.3);
+}
+
+.nav-link:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* Authentification */
+.header-auth {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--gris-clair);
+  padding: 8px 15px;
+  border-radius: 25px;
+  border: 1px solid var(--gris-moyen);
+}
+
+.user-role-badge {
+  background: linear-gradient(135deg, var(--vert-maroc), var(--vert-fonce));
+  color: var(--blanc);
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.username {
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.btn-login, .btn-logout {
+  background: linear-gradient(135deg, var(--rouge-maroc), var(--rouge-fonce));
+  color: var(--blanc);
+  border: 2px solid transparent;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 20px rgba(193, 39, 45, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-login::before, .btn-logout::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.6s;
+}
+
+.btn-login:hover::before, .btn-logout:hover::before {
+  left: 100%;
+}
+
+.btn-login:hover, .btn-logout:hover {
+  background: linear-gradient(135deg, var(--rouge-fonce), var(--rouge-maroc));
+  border-color: var(--or-maroc);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 
+    0 12px 35px rgba(193, 39, 45, 0.4),
+    0 0 25px rgba(212, 175, 55, 0.2);
+}
+
+/* Contenu principal */
+.main-content {
+  margin-top: 140px; /* Hauteur du nouveau header gouvernemental */
+  min-height: calc(100vh - 140px);
+  padding: 40px 30px;
+  background: var(--gris-clair);
+}
+
+.app {
+  min-height: 100vh;
+  background: var(--gris-clair);
+}
+
+/* Formulaires */
+form {
+  background: var(--blanc);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  margin-bottom: 15px;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--bleu-institutionnel);
+}
+
+button {
+  background: var(--rouge-maroc);
+  color: var(--blanc);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background: var(--rouge-fonce);
+  transform: translateY(-1px);
+}
+
+/* Liste des projets */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: var(--blanc);
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-left: 4px solid var(--rouge-maroc);
+}
+
+/* ===== MENU MOBILE ===== */
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle:hover {
+  background: rgba(193, 39, 45, 0.1);
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--rouge-maroc);
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-toggle:hover span {
+  background: var(--rouge-fonce);
+  transform: scaleX(1.1);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 1200px) {
+  .header-main .header-container,
+  .header-top-bar .header-container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  
+  .header-logo-section {
+    gap: 15px;
+  }
+  
+  .service-title h1 {
+    font-size: 1.2rem;
+  }
+  
+  .institution-name {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-top-bar {
+    padding: 8px 0;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .header-nav {
+    display: none;
+  }
+  
+  .header-actions {
+    gap: 15px;
+  }
+  
+  .top-center {
+    gap: 15px;
+  }
+  
+  .version-ar {
+    font-size: 0.8rem;
+  }
+  
+  .version-fr {
+    font-size: 0.75rem;
+  }
+  
+  .header-main {
+    padding: 10px 0;
+  }
+  
+  .header-main .header-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 15px;
+  }
+  
+  .header-logo-section {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .header-title-section {
+    align-items: center;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .header-nav {
+    gap: 15px;
+  }
+  
+  .nav-link {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .logo-maroc-officiel {
+    height: 50px;
+  }
+  
+  .service-title h1 {
+    font-size: 1rem;
+  }
+  
+  .institution-name {
+    font-size: 0.75rem;
+  }
+  
+  .department-name {
+    font-size: 0.7rem;
+  }
+  
+  .service-subtitle {
+    font-size: 0.7rem;
+  }
+  
+  .main-content {
+    margin-top: 180px; /* Plus d'espace sur mobile */
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo {
+    gap: 10px;
+  }
+  
+  .logo-maroc {
+    height: 40px;
+  }
+  
+  .logo-text h1 {
+    font-size: 1rem;
+  }
+  
+  .main-content {
+  padding: 80px 15px 20px 15px;
+}
+}
+
+/* ===== ANIMATIONS ET EFFETS MODERNES ===== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+h1, h2, h3, .hero-title, .main-content > *:first-child {
+  animation: fadeInUp 0.7s cubic-bezier(.39,.575,.565,1) both;
+}
+
+button, .btn-login, .btn-logout, .hero-btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(193, 39, 45, 0.12);
+}
+
+button:active, .btn-login:active, .btn-logout:active, .hero-btn:active {
+  transform: scale(0.97);
+}
+
+.card, .MuiCard-root {
+  animation: fadeInUp 0.8s cubic-bezier(.39,.575,.565,1) both;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover, .MuiCard-root:hover {
+  box-shadow: 0 12px 40px rgba(193, 39, 45, 0.15);
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Amélioration des chips (statut) */
+.MuiChip-root {
+  font-weight: 600 !important;
+  letter-spacing: 0.03em;
+  font-size: 0.9rem !important;
+  border-radius: 20px !important;
+  transition: all 0.3s ease !important;
+}
+
+.MuiChip-root:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Barres de progression personnalisées */
+.MuiLinearProgress-root {
+  border-radius: 10px !important;
+  height: 10px !important;
+}
+
+.MuiLinearProgress-bar {
+  background: linear-gradient(90deg, var(--vert-maroc) 0%, var(--or-maroc) 100%) !important;
+}
+
+/* Amélioration des boutons Material-UI */
+.MuiButton-root {
+  text-transform: none !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
+  padding: 10px 24px !important;
+}
+
+/* Transitions fluides pour tous les éléments interactifs */
+* {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* ===== HEADER STYLE XFACTORY SIMPLE ===== */
+
+.xfactory-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-bottom: 2px solid rgba(255, 165, 0, 0.3);
+  padding: 15px 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Section */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.logo-section:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+}
+
+.logo-section:active {
+  transform: scale(0.98);
+}
+
+.logo-section:focus {
+  outline: 2px solid rgba(255, 165, 0, 0.6);
+  outline-offset: 2px;
+}
+
+.logo-blason {
+  height: 50px;
+  width: auto;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  padding: 8px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.logo-blason:hover {
+  transform: scale(1.05);
+  border-color: rgba(255, 165, 0, 0.6);
+  box-shadow: 0 12px 40px rgba(255, 165, 0, 0.2);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+}
+
+/* Titre de l'application */
+.app-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.app-name {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.app-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #FFA500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Indicateur de clic */
+.logo-section::after {
+  content: "Accueil";
+  font-size: 0.8rem;
+  margin-left: 8px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.logo-section:hover::after {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Menu Toggle */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  padding: 12px;
+  background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(255, 165, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.menu-toggle:hover {
+  background: linear-gradient(135deg, #FF8C00 0%, #FF7F00 100%);
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 35px rgba(255, 165, 0, 0.4);
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Menu déroulant */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-top: 2px solid rgba(255, 165, 0, 0.3);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  animation: slideDown 0.3s ease;
+  backdrop-filter: blur(20px);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.menu-title {
+  color: #FFA500;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  border-bottom: 3px solid rgba(255, 165, 0, 0.6);
+  padding-bottom: 12px;
+  text-shadow: 0 2px 8px rgba(255, 165, 0, 0.3);
+}
+
+.menu-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: left;
+  padding: 14px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.menu-item:hover {
+  background: rgba(255, 165, 0, 0.15);
+  border-color: rgba(255, 165, 0, 0.4);
+  color: #FFA500;
+  transform: translateX(5px);
+  box-shadow: 0 8px 25px rgba(255, 165, 0, 0.2);
+}
+
+.menu-item:active {
+  transform: translateX(5px) scale(0.98);
+}
+
+/* Boutons spéciaux */
+.login-btn {
+  background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%) !important;
+  color: white !important;
+  font-weight: 600;
+  text-align: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 8px 25px rgba(255, 165, 0, 0.3);
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #FF8C00 0%, #FF7F00 100%) !important;
+  color: white !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 12px 35px rgba(255, 165, 0, 0.4);
+}
+
+.logout-btn {
+  background: rgba(244, 67, 54, 0.1) !important;
+  color: #F44336 !important;
+  border: 2px solid rgba(244, 67, 54, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.logout-btn:hover {
+  background: rgba(244, 67, 54, 0.2) !important;
+  color: #F44336 !important;
+  border-color: rgba(244, 67, 54, 0.6);
+  box-shadow: 0 8px 25px rgba(244, 67, 54, 0.2);
+}
+
+/* Informations utilisateur */
+.user-info-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  border: 2px solid rgba(255, 165, 0, 0.3);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 25px rgba(255, 165, 0, 0.1);
+}
+
+.user-role-badge {
+  background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  align-self: flex-start;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.username-menu {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 20px;
+  }
+  
+  .logo-blason {
+    height: 40px;
+  }
+  
+  .app-name {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+  
+  .app-subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .logo-section {
+    padding: 6px 8px;
+  }
+  
+  .logo-section::after {
+    font-size: 0.7rem;
+    margin-left: 6px;
+  }
+
+  .menu-container {
+    padding: 20px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .dropdown-menu {
+    position: fixed;
+    top: 80px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+}
