@@ -1,8 +1,8 @@
-# 🏗️ Application de Gestion des Travaux Publics
+#  Application de Gestion des Travaux Publics
 
 Application web moderne pour la gestion des projets de travaux publics au Maroc.
 
-## 🚀 Technologies Utilisées
+##  Technologies Utilisées
 
 ### Frontend
 - **React 18** avec TypeScript
@@ -16,25 +16,25 @@ Application web moderne pour la gestion des projets de travaux publics au Maroc.
 - **SQLite** pour la base de données
 - **CORS** configuré pour le développement
 
-## 📋 Fonctionnalités
+##  Fonctionnalités
 
-### 👥 Gestion des Utilisateurs
+###  Gestion des Utilisateurs
 - **Administrateurs** : Création et gestion des projets, assignation des techniciens
 - **Techniciens** : Création de rapports et réclamations, suivi des projets assignés
 - **Citoyens** : Consultation publique des projets et rapports
 
-### 🏗️ Gestion des Projets
+###  Gestion des Projets
 - Création et modification de projets
 - Suivi de l'avancement
 - Gestion des budgets et échéances
 - Assignation de techniciens
 
-### 📊 Rapports et Réclamations
+###  Rapports et Réclamations
 - Système de rapports d'avancement
 - Gestion des réclamations techniques
 - Historique complet des interventions
 
-## 🛠️ Installation et Démarrage
+##  Installation et Démarrage
 
 ### Prérequis
 - Python 3.13+
@@ -58,22 +58,22 @@ npm install
 npm run dev
 ```
 
-## 🌐 Accès
+##  Accès
 
 - **Frontend** : http://localhost:5173
 - **Backend API** : http://localhost:8000/api
 - **Admin Django** : http://localhost:8000/admin
 
-## 🔐 Comptes de Test
+##  Comptes de Test
 
 - **Admin** : `admin` / `admin123`
 - **Technicien** : `tech1` / `tech123`
 
-## 📱 Interface
+##  Interface
 
 Interface moderne et responsive inspirée du design industriel, optimisée pour tous les appareils.
 
-## 🚧 Développement
+##  Développement
 
 Application en développement actif. Toutes les fonctionnalités principales sont opérationnelles.
 
